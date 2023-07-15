@@ -1,0 +1,24 @@
+html,
+body {
+    margin: 0;
+    background-color: #2F4F30;
+}
+
+.title {
+    text-align: center;
+    background-color: black;
+    color: white;
+    /* padding: 20px; */
+    font-size: 25px;
+}
+
+.cartas {
+    position: relative;
+    width: 150px;
+    left: 100px;
+    margin-left: -95px;
+}
+
+.divCards {
+    height: 240px;
+}
