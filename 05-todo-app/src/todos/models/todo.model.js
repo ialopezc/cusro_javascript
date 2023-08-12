@@ -4,7 +4,7 @@ export class Todo {
     constructor(description) {
         this.id = uuid();
         this.description = description;
-        this.donde = false;
+        this.done = false;
         this.createAt = new Date();
     }
 }
