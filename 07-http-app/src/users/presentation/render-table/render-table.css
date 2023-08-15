@@ -1,0 +1,15 @@
+table {
+    background-color: rgba(0, 0, 0, 0.348);
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px rgba(255, 255, 255, 0.879) solid;
+}
+
+table tr td {
+    border-top: 1px rgba(255, 255, 255, 0.879) solid;
+}
+
+table tr td:last-child {
+    border-left: 1px rgba(255, 255, 255, 0.879) solid;
+    min-width: 160px;
+}

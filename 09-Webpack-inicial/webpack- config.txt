@@ -1,0 +1,110 @@
+https://webpack.js.org/guides/getting-started/
+
+mkdir webpack-demo
+cd webpack-demo
+npm init -y
+npm install webpack webpack-cli --save-dev
+
+
+https://webpack.js.org/concepts/configuration/
+
+const path = require('path');
+
+module.exports = {
+  mode: 'development',
+  entry: './foo.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'foo.bundle.js',
+  },
+};
+
+
+https://webpack.js.org/loaders/html-loader/
+
+npm install --save-dev html-loader
+
+file.js
+
+import html from "./file.html";
+webpack.config.js
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+    ],
+  },
+};
+
+
+https://webpack.js.org/plugins/html-webpack-plugin/
+
+npm install --save-dev html-webpack-plugin
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+
+module.exports = {
+  entry: 'index.js',
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'index_bundle.js',
+  },
+  plugins: [new HtmlWebpackPlugin()],
+};
+
+
+https://webpack.js.org/configuration/dev-server/
+
+https://github.com/webpack/webpack-dev-server
+
+
+
+https://webpack.js.org/loaders/css-loader/
+
+npm install --save-dev css-loader
+
+file.js
+
+import css from "file.css";
+webpack.config.js
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+};
+
+
+
+https://webpack.js.org/loaders/style-loader/
+
+style.css
+
+body {
+  background: green;
+}
+component.js
+
+import "./style.css";
+webpack.config.js
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+};
